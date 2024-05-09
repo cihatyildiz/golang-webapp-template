@@ -3,10 +3,10 @@ package routes
 import (
 	"net/http"
 
-	"github.com/cihatyildiz/golang-webapp-template/middleware"
-	"github.com/cihatyildiz/golang-webapp-template/models"
-	"github.com/cihatyildiz/golang-webapp-template/sessions"
-	"github.com/cihatyildiz/golang-webapp-template/utils"
+	"github.com/cihatyildiz/golang-webapp-template/internal/middleware"
+	"github.com/cihatyildiz/golang-webapp-template/internal/models"
+	"github.com/cihatyildiz/golang-webapp-template/internal/sessions"
+	"github.com/cihatyildiz/golang-webapp-template/internal/utils"
 	"github.com/gorilla/mux"
 )
 
