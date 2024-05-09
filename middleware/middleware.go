@@ -2,7 +2,8 @@ package middleware
 
 import (
 	"net/http"
-	"../sessions"
+
+	"github.com/cihatyildiz/golang-webapp-template/sessions"
 )
 
 func AuthRequired(handler http.HandlerFunc) http.HandlerFunc {

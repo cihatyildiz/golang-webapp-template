@@ -2,11 +2,12 @@ package routes
 
 import (
 	"net/http"
+
+	"github.com/cihatyildiz/golang-webapp-template/middleware"
+	"github.com/cihatyildiz/golang-webapp-template/models"
+	"github.com/cihatyildiz/golang-webapp-template/sessions"
+	"github.com/cihatyildiz/golang-webapp-template/utils"
 	"github.com/gorilla/mux"
-	"../middleware"
-	"../models"
-	"../sessions"
-	"../utils"
 )
 
 func NewRouter() *mux.Router {
@@ -32,12 +33,12 @@ func indexGetHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	utils.ExecuteTemplate(w, "index.html", struct {
-		Title string
-		Updates []*models.Update
+		Title       string
+		Updates     []*models.Update
 		DisplayForm bool
-	} {
-		Title: "All updates",
-		Updates: updates,
+	}{
+		Title:       "All updates",
+		Updates:     updates,
 		DisplayForm: true,
 	})
 }
@@ -86,12 +87,12 @@ func userGetHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	utils.ExecuteTemplate(w, "index.html", struct {
-		Title string
-		Updates []*models.Update
+		Title       string
+		Updates     []*models.Update
 		DisplayForm bool
-		} {
-		Title: username,
-		Updates: updates,
+	}{
+		Title:       username,
+		Updates:     updates,
 		DisplayForm: currentUserId == userId,
 	})
 }

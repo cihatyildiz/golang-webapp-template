@@ -2,9 +2,10 @@ package main
 
 import (
 	"net/http"
-	"./routes"
-	"./models"
-	"./utils"
+
+	"github.com/cihatyildiz/golang-webapp-template/models"
+	"github.com/cihatyildiz/golang-webapp-template/routes"
+	"github.com/cihatyildiz/golang-webapp-template/utils"
 )
 
 func main() {
